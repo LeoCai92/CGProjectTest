@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Line Chart View Controller-->
+        <scene sceneID="TkM-zG-YIb">
+            <objects>
+                <viewController storyboardIdentifier="CGLineChartViewController" id="gtE-oE-2AR" customClass="CGLineChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x2S-wb-iEA"/>
+                        <viewControllerLayoutGuide type="bottom" id="3an-4D-0vO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="82X-61-ctu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUh-f8-T43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="-602"/>
+        </scene>
+        <!--Curve Chart View Controller-->
+        <scene sceneID="PhC-BL-3ZI">
+            <objects>
+                <viewController storyboardIdentifier="CGCurveChartViewController" id="ECa-HS-Wvv" customClass="CGCurveChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m28-FE-OeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="6MA-0b-rw0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BLp-Nx-LQh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-gL-10J">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rCl-gL-10J" firstAttribute="top" secondItem="m28-FE-OeC" secondAttribute="bottom" id="KGG-fZ-6Ys"/>
+                            <constraint firstItem="rCl-gL-10J" firstAttribute="leading" secondItem="BLp-Nx-LQh" secondAttribute="leading" id="LXl-Uy-nY8"/>
+                            <constraint firstAttribute="bottom" secondItem="rCl-gL-10J" secondAttribute="bottom" id="UQw-db-af6"/>
+                            <constraint firstAttribute="trailing" secondItem="rCl-gL-10J" secondAttribute="trailing" id="pW1-VQ-IOC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ff-cX-MpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-602"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg1" width="350" height="654"/>
+    </resources>
+</document>

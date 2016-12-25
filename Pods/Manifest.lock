@@ -1,0 +1,15 @@
+PODS:
+  - Masonry (1.0.2)
+  - VCTransitionsLibrary (1.5.0)
+
+DEPENDENCIES:
+  - Masonry
+  - VCTransitionsLibrary
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
+
+PODFILE CHECKSUM: cbc8f1ea0fd6b24c87846615120fda2d746e08d0
+
+COCOAPODS: 1.0.1
