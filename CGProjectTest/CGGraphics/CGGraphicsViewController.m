@@ -50,10 +50,15 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIStoryboard *Graphics = [UIStoryboard storyboardWithName:@"CGGraphics" bundle:nil];
-    UIViewController *vc = [Graphics instantiateViewControllerWithIdentifier:self.storyBoardID[indexPath.row]];
-    if (vc) {
+    
+    NSString *vcID = self.storyBoardID[indexPath.row];
+    // 从storyboard实例化控制器时，要判断控制器是否存在，否则运行crash
+    Class class = NSClassFromString(vcID);
+    if ([class isSubclassOfClass:UIViewController.class]) {
+        UIViewController *vc = [Graphics instantiateViewControllerWithIdentifier:vcID];
         vc.title = _titles[indexPath.row];
         [self.navigationController pushViewController:vc animated:YES];
+
     }
 }
 
