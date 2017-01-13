@@ -11,6 +11,7 @@
 		A201C63C1DBDE6EF001E11A6 /* CEHorizontalSwipeInteractionControllerOrigin.m in Sources */ = {isa = PBXBuildFile; fileRef = A201C63B1DBDE6EF001E11A6 /* CEHorizontalSwipeInteractionControllerOrigin.m */; };
 		A20285391DAB8F6A0046B193 /* CGModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20285381DAB8F6A0046B193 /* CGModalViewController.m */; };
 		A22673C31D7FFA77001EC41B /* CGDownAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22673C21D7FFA77001EC41B /* CGDownAnimationViewController.m */; };
+		A2378E8C1E28E30E009DF56C /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = A2378E8B1E28E30E009DF56C /* UIImage+Tint.m */; };
 		A2742E4E1DE03D5500158E60 /* MKBaseControllerTransitioningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2742E4D1DE03D5500158E60 /* MKBaseControllerTransitioningAnimation.m */; };
 		A2742E511DE03DE800158E60 /* MKPullCloseControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2742E501DE03DE800158E60 /* MKPullCloseControllerAnimation.m */; };
 		A2742E541DE049C900158E60 /* MKPullCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2742E531DE049C900158E60 /* MKPullCloseViewController.m */; };
@@ -122,6 +123,8 @@
 		A20285381DAB8F6A0046B193 /* CGModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGModalViewController.m; sourceTree = "<group>"; };
 		A22673C11D7FFA77001EC41B /* CGDownAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGDownAnimationViewController.h; sourceTree = "<group>"; };
 		A22673C21D7FFA77001EC41B /* CGDownAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGDownAnimationViewController.m; sourceTree = "<group>"; };
+		A2378E8A1E28E30E009DF56C /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		A2378E8B1E28E30E009DF56C /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		A2742E4C1DE03D5500158E60 /* MKBaseControllerTransitioningAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBaseControllerTransitioningAnimation.h; sourceTree = "<group>"; };
 		A2742E4D1DE03D5500158E60 /* MKBaseControllerTransitioningAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBaseControllerTransitioningAnimation.m; sourceTree = "<group>"; };
 		A2742E4F1DE03DE800158E60 /* MKPullCloseControllerAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPullCloseControllerAnimation.h; sourceTree = "<group>"; };
@@ -664,6 +667,8 @@
 			children = (
 				A2E09CB31D9BC0A30035B3C0 /* UIViewController+Transitions.h */,
 				A2E09CB41D9BC0A30035B3C0 /* UIViewController+Transitions.m */,
+				A2378E8A1E28E30E009DF56C /* UIImage+Tint.h */,
+				A2378E8B1E28E30E009DF56C /* UIImage+Tint.m */,
 			);
 			path = CGCategory;
 			sourceTree = "<group>";
@@ -1021,6 +1026,7 @@
 				A2CCDF251D7529AF007577B9 /* CGScaleHeadViewMasonryViewController.m in Sources */,
 				A2DAC2B41D6C2B35002A8EDC /* CGProgressViewController.m in Sources */,
 				A2E09CF61D9BE0760035B3C0 /* WXSPercentDrivenInteractiveTransition.m in Sources */,
+				A2378E8C1E28E30E009DF56C /* UIImage+Tint.m in Sources */,
 				A2B4398A1DB5BE5A00D00BA1 /* CGGraphicsViewController.m in Sources */,
 				A2A3E3641D6D7CF100547B92 /* CGLeftInstricRightSlideModel.m in Sources */,
 				A2B439991DB5C45F00D00BA1 /* CGLineChartView.m in Sources */,
