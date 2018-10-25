@@ -23,8 +23,6 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    [self sampleRotateTest];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -69,7 +67,8 @@
     if (!_titles) {
         _titles = @[@"CGScaleAnimation",
                     @"CGExpandAnimation",
-                    @"CGDownAnimation"];
+                    @"CGDownAnimation",
+                    @"CGLayerSpecialAnimation"];
     }
     return _titles;
 }
@@ -78,7 +77,8 @@
     if (!_storyBoardID) {
         _storyBoardID = @[@"CGScaleAnimationViewController",
                           @"CGExpandAnimationViewController",
-                          @"CGDownAnimationViewController"];
+                          @"CGDownAnimationViewController",
+                          @"CGLayerSpecialAnimationViewController"];
     }
     return _storyBoardID;
 }

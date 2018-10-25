@@ -44,6 +44,7 @@
 		A2C647431D6FEB6B007BC013 /* CGKeyboardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C647421D6FEB6B007BC013 /* CGKeyboardsViewController.m */; };
 		A2C647461D6FEDBA007BC013 /* CGKeyboardInputCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C647451D6FEDBA007BC013 /* CGKeyboardInputCollectionViewCell.m */; };
 		A2C647491D700F29007BC013 /* CGKeyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C647481D700F29007BC013 /* CGKeyCollectionViewCell.m */; };
+		A2CB1F0D21819241004D3433 /* CGLayerSpecialAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB1F0C21819241004D3433 /* CGLayerSpecialAnimationViewController.m */; };
 		A2CCDF251D7529AF007577B9 /* CGScaleHeadViewMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CCDF241D7529AF007577B9 /* CGScaleHeadViewMasonryViewController.m */; };
 		A2CCDF291D753570007577B9 /* CGMasonryExpandCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CCDF281D753570007577B9 /* CGMasonryExpandCellViewController.m */; };
 		A2CCDF321D7537BC007577B9 /* ExpandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CCDF2F1D7537BC007577B9 /* ExpandCell.m */; };
@@ -189,6 +190,8 @@
 		A2C647451D6FEDBA007BC013 /* CGKeyboardInputCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGKeyboardInputCollectionViewCell.m; sourceTree = "<group>"; };
 		A2C647471D700F29007BC013 /* CGKeyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGKeyCollectionViewCell.h; sourceTree = "<group>"; };
 		A2C647481D700F29007BC013 /* CGKeyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGKeyCollectionViewCell.m; sourceTree = "<group>"; };
+		A2CB1F0B21819241004D3433 /* CGLayerSpecialAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGLayerSpecialAnimationViewController.h; sourceTree = "<group>"; };
+		A2CB1F0C21819241004D3433 /* CGLayerSpecialAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGLayerSpecialAnimationViewController.m; sourceTree = "<group>"; };
 		A2CCDF231D7529AF007577B9 /* CGScaleHeadViewMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGScaleHeadViewMasonryViewController.h; sourceTree = "<group>"; };
 		A2CCDF241D7529AF007577B9 /* CGScaleHeadViewMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGScaleHeadViewMasonryViewController.m; sourceTree = "<group>"; };
 		A2CCDF271D753570007577B9 /* CGMasonryExpandCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMasonryExpandCellViewController.h; sourceTree = "<group>"; };
@@ -583,6 +586,15 @@
 			path = CGKeyboards;
 			sourceTree = "<group>";
 		};
+		A2CB1F0A2181919C004D3433 /* CGLayerSpecialAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A2CB1F0B21819241004D3433 /* CGLayerSpecialAnimationViewController.h */,
+				A2CB1F0C21819241004D3433 /* CGLayerSpecialAnimationViewController.m */,
+			);
+			path = CGLayerSpecialAnimation;
+			sourceTree = "<group>";
+		};
 		A2CCDF261D753555007577B9 /* CGMasonryExpandCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,9 +622,10 @@
 			children = (
 				A2CCDF3E1D75A05B007577B9 /* CGAnimationViewController.h */,
 				A2CCDF3F1D75A05B007577B9 /* CGAnimationViewController.m */,
-				A22673C01D7FFA47001EC41B /* CGDownAnimationView */,
 				A2EB792F1D76719A00D2CCF6 /* CGScaleAnimation */,
 				A2EB79341D76726400D2CCF6 /* CGExpandAnimation */,
+				A22673C01D7FFA47001EC41B /* CGDownAnimationView */,
+				A2CB1F0A2181919C004D3433 /* CGLayerSpecialAnimation */,
 			);
 			path = CGAnimation;
 			sourceTree = "<group>";
@@ -1001,6 +1014,7 @@
 				A2D04C2B1D815C72009BB447 /* CGNotificationViewController.m in Sources */,
 				A2E09CCF1D9BE03B0035B3C0 /* WXSBaseViewController.m in Sources */,
 				A2FF4F5C1DAB8B63003236F0 /* CGModalTransitionController.m in Sources */,
+				A2CB1F0D21819241004D3433 /* CGLayerSpecialAnimationViewController.m in Sources */,
 				A2E09CF21D9BE0760035B3C0 /* WXSTransitionProperty.m in Sources */,
 				A2F4BA4D1D7192A300F5057A /* CGCoordinatesViewController.m in Sources */,
 				A2CF07B61D9B6BFE0094474C /* CGTabBaseViewController.m in Sources */,
