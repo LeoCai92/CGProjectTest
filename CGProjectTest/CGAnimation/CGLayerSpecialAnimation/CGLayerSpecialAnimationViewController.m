@@ -18,7 +18,10 @@
     [super viewDidLoad];
     
     // Show Emitter Layer
-    [self setupEmitterLayer];
+//    [self setupEmitterLayer];
+    
+    // Show Replicator Layer
+    [self setupReplicatorLayer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,9 +32,10 @@
 #pragma mark - Layer Animation
 - (void)setupEmitterLayer
 {
+    // Using emitter layer to show "kiss emoji" animatio like wechat
     //添加背景图
     UIImage *bgImage = [UIImage imageNamed:@"franke.jpg"];
-    self.view.backgroundColor = [UIColor     colorWithPatternImage:bgImage];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bgImage];
     
     //粒子图层
     CAEmitterLayer *snowLayer = [CAEmitterLayer layer];
@@ -81,6 +85,81 @@
     snowLayer.shadowOffset = CGSizeMake(1, 1);
     snowLayer.emitterCells = [NSArray arrayWithArray:snow_array];
     [self.view.layer insertSublayer:snowLayer atIndex:0];
+}
+
+- (void)setupReplicatorLayer
+{
+    // Using replicator layer to show wave animation
+    
+    CGRect frame = self.view.frame; CGFloat height = 180.f;
+    CGRect waveAniViewRect = CGRectMake(0, (frame.size.height - height)/2.f, frame.size.width, height);
+    UIView *waveAniView = [[UIView alloc] initWithFrame:waveAniViewRect];
+    [self.view addSubview:waveAniView];
+    waveAniView.backgroundColor = [UIColor yellowColor];
+    
+    CGFloat kCicleWidth = height/3.f;
+    CGRect roundLayerRect = CGRectMake((waveAniViewRect.size.width - kCicleWidth)/2.f, (waveAniViewRect.size.height - kCicleWidth)/2.f, kCicleWidth, kCicleWidth);
+    CAShapeLayer *roundLayer = [CAShapeLayer layer];
+    // 两个layerd的frame都要设置, 否则动画会发生偏移
+    roundLayer.frame = roundLayerRect;
+    roundLayer.fillColor = [UIColor redColor].CGColor;
+    UIBezierPath *roundPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, kCicleWidth, kCicleWidth)];
+    roundLayer.path = roundPath.CGPath;
+    
+    // Add scale animation
+    CABasicAnimation *scaleAni = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scaleAni.fromValue = @1.f;
+    scaleAni.toValue = @2.5f;
+    // Add alpa animation
+    CABasicAnimation *alpaAni = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    alpaAni.fromValue = @1.f;
+    alpaAni.toValue = @0.;
+    
+    CAAnimationGroup *groupAni = [CAAnimationGroup animation];
+    groupAni.animations = @[scaleAni, alpaAni];
+    groupAni.duration = 2.f;
+    groupAni.repeatCount = NSIntegerMax;
+    [roundLayer addAnimation:groupAni forKey:nil];
+    
+    CAReplicatorLayer *replicatroLayor = [CAReplicatorLayer layer];
+    [replicatroLayor addSublayer:roundLayer];
+    // 两个layerd的frame都要设置, 否则动画会发生偏移
+    replicatroLayor.frame = roundLayerRect;
+    // 设置postion，否则layer不居中
+    replicatroLayor.position = CGPointMake(roundLayerRect.size.width/2.f, roundLayerRect.size.height/2.f);
+    replicatroLayor.instanceCount = 3;
+    replicatroLayor.instanceDelay = 0.5f;
+    [waveAniView.layer addSublayer:replicatroLayor];
+    
+    // A cover rect
+    kCicleWidth += 20.f;
+    roundLayerRect = CGRectMake((waveAniViewRect.size.width - kCicleWidth)/2.f, (waveAniViewRect.size.height - kCicleWidth)/2.f, kCicleWidth, kCicleWidth);;
+    CAShapeLayer *coverRoundLayer = [CAShapeLayer layer];
+    coverRoundLayer.frame = roundLayerRect;
+    coverRoundLayer.fillColor = [UIColor redColor].CGColor;
+    roundLayerRect.origin = CGPointZero;
+    coverRoundLayer.path = [UIBezierPath bezierPathWithOvalInRect:roundLayerRect].CGPath;
+    [waveAniView.layer addSublayer:coverRoundLayer];
+}
+
+#pragma mark - Animation Test
+/** compare for implict & explicit animation'effects to layer's origin value */
+- (void)compareImplicitAndExplicitAnimation
+{
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    [self.view.layer addSublayer:shapeLayer];
+    shapeLayer.frame = CGRectMake(150, 150, 100, 100);
+    shapeLayer.fillColor = [UIColor orangeColor].CGColor;
+    shapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 100, 100)].CGPath;
+    
+    // Implicit animation will change layer origin value
+    //    shapeLayer.opacity = 0.1f;
+    // Explicit animation will not change layer origin value
+    CABasicAnimation *basicAni = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    basicAni.fromValue = @1.f;
+    basicAni.toValue = @0.1f;
+    basicAni.duration = 3.f;
+    [shapeLayer addAnimation:basicAni forKey:nil];
 }
 
 @end
